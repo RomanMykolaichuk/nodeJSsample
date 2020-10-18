@@ -5,11 +5,7 @@ const pool = new Pool({
     user: 'utotqzeajjkolm',
     password: '2fea7ccdb7fb8a361d60bc97272d6e68e01ed655425c930bbbc3eed760436fda',
     port: '5432',
-    ssl: true,
-    dialect: 'postgres',
-    dialectOptions: {
-        "ssl": {"require": true}
-    }
+    ssl: true
 })
 const getUsers = (request, response) => {
     pool.query('SELECT * FROM table_sample ORDER BY id ASC', (error, results) => {
