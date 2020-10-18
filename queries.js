@@ -8,7 +8,7 @@ const pool = new Pool({
     ssl: true
 })
 const getUsers = (request, response) => {
-    pool.query('SELECT * FROM table_sample', (error, results) => {
+    pool.query('SELECT * FROM work1.table_sample', (error, results) => {
         if (error) {
             throw error
         }
